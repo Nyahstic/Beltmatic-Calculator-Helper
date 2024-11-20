@@ -357,3 +357,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/bin/Debug/net8.0-windows/Beltmatic Calculator Helper.dll
+/bin/Debug/net8.0-windows/Beltmatic Calculator Helper.exe
