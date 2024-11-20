@@ -2,6 +2,8 @@
 Game: https://store.steampowered.com/app/2674590/Beltmatic/
 Beltmatic is a casual factory game where you combine numbers using mathematical operations.
 
+This fork will modify parts to make more user-friendly to use while playing.
+
 This is a program based on the GO project that is located here:
 https://go.dev/play/p/BXAENbVxseb
 
