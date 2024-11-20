@@ -14,4 +14,5 @@ Keep in mind that I am in NO means able to reproduce the maths that are taking p
 Enter in the target number you wish to get, then enter in the numbers you have access too, and check the boxs on what operations are open. 
 Once completed then click the button and you will get the best calculations to do in game and order.
 
-![image](https://github.com/saladin1980/Beltmatic-Calculator-Helper/assets/627222/dc50ab28-01a2-4ba3-aa7a-1785d77aeefa)
+# Screenshot
+![Program Screenshot](https://github.com/Nyahstic/Beltmatic-Calculator-Helper/blob/master/Sample.png)
