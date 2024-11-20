@@ -13,8 +13,6 @@ namespace Beltmatic_Calculator_Helper
         {
             InitializeComponent();
             listCheckOperations.SetItemChecked(listCheckOperations.Items.IndexOf("Addition"), true);
-
-            txtResult.Text = "Results";
         }
         private void listCheckOperations_ItemCheck(object sender, ItemCheckEventArgs e)
         {
@@ -37,14 +35,14 @@ namespace Beltmatic_Calculator_Helper
             }
 
             int maxBaseNumber;
-            if (int.TryParse(txtMaxBaseNumber.Text, out maxBaseNumber) && maxBaseNumber >= 1 && maxBaseNumber <= 15)
+            if (int.TryParse(txtMaxBaseNumber.Text, out maxBaseNumber) && maxBaseNumber >= 1 && maxBaseNumber <= 999)
             {
                 System.Diagnostics.Debug.WriteLine($"Max base number set to {maxBaseNumber}");
             }
             else
             {
                 System.Diagnostics.Debug.WriteLine("Invalid max base number. Using default of 15.");
-                maxBaseNumber = 15;
+                maxBaseNumber = 999;
             }
 
             Dictionary<string, string> operatorMap = new Dictionary<string, string>
@@ -52,7 +50,8 @@ namespace Beltmatic_Calculator_Helper
                     {"Addition", "+"},
                     {"Subtraction", "-"},
                     {"Multiplication", "*"},
-                    {"Division", "/"}
+                    {"Division", "/"},
+                    {"Elevation", "^" }
                 };
 
             string[] operations = listCheckOperations.CheckedItems.Cast<string>()
@@ -66,11 +65,12 @@ namespace Beltmatic_Calculator_Helper
 
             if (result == null)
             {
-                txtResult.Text = "No expression found";
+                tbxResult.Text = "No expression found";
             }
             else
             {
-                txtResult.Text = result;
+                tbxResult.Text = result;
+                lboxHistory.Items.Add(result);
             }
 
             txtExecutionTime.Text = "Execution time: " + stopwatch.ElapsedMilliseconds + " ms";
@@ -151,6 +151,26 @@ namespace Beltmatic_Calculator_Helper
                 default:
                     throw new ArgumentException("Invalid operation");
             }
+        }
+
+        private void lboxHistory_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            tbxResult.Text = lboxHistory.Items[lboxHistory.SelectedIndex].ToString();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnClearHistory_Click(object sender, EventArgs e)
+        {
+            lboxHistory.Items.Clear();
+        }
+
+        private void chkBoxTopMost_CheckedChanged(object sender, EventArgs e)
+        {
+            TopMost = chkBoxTopMost.Checked;
         }
     }
 

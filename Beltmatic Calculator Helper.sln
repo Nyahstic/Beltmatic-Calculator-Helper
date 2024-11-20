@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.10.34928.147
+VisualStudioVersion = 17.11.35208.52
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beltmatic Calculator Helper", "Beltmatic Calculator Helper.csproj", "{98294C3F-C533-4B3F-8E4C-72D55981E55A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Beltmatic Calculator Helper", "Beltmatic Calculator Helper.csproj", "{3A36DCE7-8A04-4027-806F-2A60DEB66F36}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{98294C3F-C533-4B3F-8E4C-72D55981E55A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{98294C3F-C533-4B3F-8E4C-72D55981E55A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{98294C3F-C533-4B3F-8E4C-72D55981E55A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{98294C3F-C533-4B3F-8E4C-72D55981E55A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A36DCE7-8A04-4027-806F-2A60DEB66F36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A36DCE7-8A04-4027-806F-2A60DEB66F36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A36DCE7-8A04-4027-806F-2A60DEB66F36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A36DCE7-8A04-4027-806F-2A60DEB66F36}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {95570AA9-1663-48B0-BD5B-B76B2AB375DE}
+		SolutionGuid = {9E7DB724-AFFF-485C-A287-94D3F6474FFE}
 	EndGlobalSection
 EndGlobal
