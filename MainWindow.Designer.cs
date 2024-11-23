@@ -1,6 +1,6 @@
 ﻿namespace Beltmatic_Calculator_Helper
 {
-    partial class Form1
+    partial class MainWindow
     {
         /// <summary>
         ///  Required designer variable.

@@ -7,13 +7,14 @@ using System.Windows.Forms;
 namespace Beltmatic_Calculator_Helper
 
 {
-    public partial class Form1 : Form
+    public partial class MainWindow : Form
     {
-        public Form1()
+        public MainWindow()
         {
             InitializeComponent();
             listCheckOperations.SetItemChecked(listCheckOperations.Items.IndexOf("Addition"), true);
         }
+
         private void listCheckOperations_ItemCheck(object sender, ItemCheckEventArgs e)
         {
             if (listCheckOperations.Items[e.Index].ToString() == "Addition")
