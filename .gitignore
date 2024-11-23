@@ -359,3 +359,4 @@ MigrationBackup/
 FodyWeavers.xsd
 /bin/Debug/net8.0-windows/Beltmatic Calculator Helper.dll
 /bin/Debug/net8.0-windows/Beltmatic Calculator Helper.exe
+/bin/Debug/net8.0-windows/Beltmatic Calculator Helper.exe.WebView2/EBWebView
