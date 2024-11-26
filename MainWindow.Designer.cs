@@ -42,7 +42,10 @@
             lblHistory = new Label();
             btnClearHistory = new Button();
             chkBoxTopMost = new CheckBox();
+            tbOpacity = new TrackBar();
+            lbOpacity = new Label();
             ((System.ComponentModel.ISupportInitialize)txtMaxBaseNumber).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)tbOpacity).BeginInit();
             SuspendLayout();
             // 
             // txtTargetNumber
@@ -81,6 +84,7 @@
             listCheckOperations.Size = new Size(120, 130);
             listCheckOperations.TabIndex = 11;
             listCheckOperations.ItemCheck += listCheckOperations_ItemCheck;
+            listCheckOperations.SelectedIndexChanged += listCheckOperations_SelectedIndexChanged;
             // 
             // lblOperation
             // 
@@ -180,11 +184,34 @@
             chkBoxTopMost.UseVisualStyleBackColor = true;
             chkBoxTopMost.CheckedChanged += chkBoxTopMost_CheckedChanged;
             // 
-            // Form1
+            // tbOpacity
+            // 
+            tbOpacity.AutoSize = false;
+            tbOpacity.Location = new Point(171, 518);
+            tbOpacity.Maximum = 100;
+            tbOpacity.Name = "tbOpacity";
+            tbOpacity.Size = new Size(375, 19);
+            tbOpacity.TabIndex = 22;
+            tbOpacity.TickFrequency = 5;
+            tbOpacity.Value = 50;
+            tbOpacity.Scroll += ChangeOpacity;
+            // 
+            // lbOpacity
+            // 
+            lbOpacity.AutoSize = true;
+            lbOpacity.Location = new Point(124, 518);
+            lbOpacity.Name = "lbOpacity";
+            lbOpacity.Size = new Size(48, 15);
+            lbOpacity.TabIndex = 23;
+            lbOpacity.Text = "Opacity";
+            // 
+            // MainWindow
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(579, 541);
+            Controls.Add(lbOpacity);
+            Controls.Add(tbOpacity);
             Controls.Add(chkBoxTopMost);
             Controls.Add(btnClearHistory);
             Controls.Add(lblHistory);
@@ -199,10 +226,13 @@
             Controls.Add(txtExecutionTime);
             Controls.Add(button1);
             Controls.Add(txtTargetNumber);
-            Name = "Form1";
+            Name = "MainWindow";
             Text = "Beltmatix Calc";
+            Activated += LoseTransparency;
+            Deactivate += GainTransparency;
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)txtMaxBaseNumber).EndInit();
+            ((System.ComponentModel.ISupportInitialize)tbOpacity).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -223,5 +253,7 @@
         private Label lblHistory;
         private Button btnClearHistory;
         private CheckBox chkBoxTopMost;
+        private TrackBar tbOpacity;
+        private Label lbOpacity;
     }
 }

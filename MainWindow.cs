@@ -9,18 +9,19 @@ namespace Beltmatic_Calculator_Helper
 {
     public partial class MainWindow : Form
     {
+        Font NormalFont;
+        Font BigFont;
         public MainWindow()
         {
+            AllowTransparency = true;
             InitializeComponent();
             listCheckOperations.SetItemChecked(listCheckOperations.Items.IndexOf("Addition"), true);
+            chkBoxTopMost_CheckedChanged(this, EventArgs.Empty);
         }
 
         private void listCheckOperations_ItemCheck(object sender, ItemCheckEventArgs e)
         {
-            if (listCheckOperations.Items[e.Index].ToString() == "Addition")
-            {
-                e.NewValue = CheckState.Checked;
-            }
+            
         }
         private void btnFindExpression_Click(object sender, EventArgs e)
         {
@@ -162,6 +163,8 @@ namespace Beltmatic_Calculator_Helper
         private void Form1_Load(object sender, EventArgs e)
         {
 
+            BigFont = new Font(tbxResult.Font.FontFamily, tbxResult.Font.SizeInPoints * 4);
+            NormalFont = tbxResult.Font;
         }
 
         private void btnClearHistory_Click(object sender, EventArgs e)
@@ -169,9 +172,53 @@ namespace Beltmatic_Calculator_Helper
             lboxHistory.Items.Clear();
         }
 
+        bool alreadyDivided = true;
         private void chkBoxTopMost_CheckedChanged(object sender, EventArgs e)
         {
             TopMost = chkBoxTopMost.Checked;
+            lbOpacity.Visible = TopMost;
+            tbOpacity.Visible = tbOpacity.Enabled = TopMost;
+
+        }
+
+        private void LoseTransparency(object sender, EventArgs e)
+        {
+            Opacity = 1;
+        }
+
+        private void GainTransparency(object sender, EventArgs e)
+        {
+            try
+            {
+                if (TopMost) Opacity = (double)tbOpacity.Value / 100;
+            }
+            catch (Exception)
+            {
+                Debug.WriteLine("I got an exception by having opacity anything other than 1");
+            }
+        }
+
+        private void ChangeOpacity(object sender, EventArgs e)
+        {
+            if (TopMost && tbOpacity.Value < 20)
+            {
+                tbxResult.BackColor = Color.Black;
+                tbxResult.ForeColor = Color.White;
+                tbxResult.Font = BigFont;
+                alreadyDivided = true;
+            }
+            else
+            {
+                tbxResult.BackColor = Color.White;
+                tbxResult.ForeColor = Color.Black;
+                tbxResult.Font = NormalFont;
+                alreadyDivided = true;
+            }
+        }
+
+        private void listCheckOperations_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 
