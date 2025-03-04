@@ -1,8 +1,8 @@
 # Beltmatic Calculator Helper
-Game: https://store.steampowered.com/app/2674590/Beltmatic/
-Beltmatic is a casual factory game where you combine numbers using mathematical operations.
 
-This fork will modify parts to make more user-friendly to use while playing.
+This fork added some simple funcionality to make the tool more user-friendly
+
+[Beltmatic](https://store.steampowered.com/app/2674590/Beltmatic/) is a casual factory game where you combine numbers using mathematical operations.
 
 This is a program based on the GO project that is located here:
 https://go.dev/play/p/BXAENbVxseb
@@ -17,4 +17,4 @@ Enter in the target number you wish to get, then enter in the numbers you have a
 Once completed then click the button and you will get the best calculations to do in game and order.
 
 # Screenshot
-![Program Screenshot](https://github.com/Nyahstic/Beltmatic-Calculator-Helper/blob/master/Sample.png)
+![Screenshot](https://github.com/Nyahstic/Beltmatic-Calculator-Helper/blob/master/Sample.png)
